@@ -8,7 +8,6 @@ import Navbar from "react-bootstrap/Navbar";
 
 function BasicExample() {
   const router = useRouter();
-  console.log({ router });
 
   return (
     <Navbar bg="#1d1160" expand="lg">
@@ -24,7 +23,9 @@ function BasicExample() {
                 <Link
                   key={header.id}
                   className={`hover:text-yellow-600 hover:decoration-1 hover:underline ${
-                    header.link === router.pathname
+                    (header.link === "/" && router.pathname === header.link) ||
+                    (header.link !== "/" &&
+                      router.pathname.includes(header.link))
                       ? "text-yellow-600 underline"
                       : "text-[color:white]"
                   }`}

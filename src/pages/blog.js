@@ -1,5 +1,5 @@
 import MainLayout from "./layouts/MainLayout";
-import { getSortedPostsData } from "../../lib/travelPosts";
+import { getSortedPostsData } from "../../lib/blogPosts";
 import Link from "next/link";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -19,7 +19,7 @@ const travel = ({ allPostsData }) => {
         <Row>
           {allPostsData.map(({ id, date, title }) => (
             <Col key={id}>
-              <Link href={`/travel/${id}`}>{title}</Link>
+              <Link href={`/blog/${id}`}>{title}</Link>
               <br />
               {id}
               <br />
