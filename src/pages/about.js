@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "./layouts/MainLayout";
 
-const Home = () => {
+const About = () => {
   return (
     <MainLayout>
       <Container>
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

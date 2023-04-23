@@ -1,0 +1,23 @@
+.hero {
+  background: url("../assets/hero.png");
+  height: 100vh;
+  width: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  position: relative;
+  left: 0;
+}
+
+.hero-cover {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  background-color: #1d1160;
+  opacity: 60%;
+}
