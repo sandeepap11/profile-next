@@ -22,6 +22,11 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  const htmlContent = postData.contentHtml.replaceAll(
+    "serverUrlPlaceHolder",
+    process.env.SERVER_URL
+  );
+
   return (
     <MainLayout>
       <Container>
@@ -32,7 +37,7 @@ export default function Post({ postData }) {
         <br />
         {postData.date}
         <br />
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </Container>
     </MainLayout>
   );

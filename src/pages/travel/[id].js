@@ -26,7 +26,7 @@ export default function Post({ postData }) {
     "serverUrlPlaceHolder",
     process.env.SERVER_URL
   );
-  console.log({ htmlContent });
+
   return (
     <MainLayout>
       <Container>
