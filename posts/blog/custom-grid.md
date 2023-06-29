@@ -1,6 +1,7 @@
 ---
 title: "A Custom React Grid: Load Data (Part 1)"
 date: "2020-07-07"
+thumbnail: serverUrlPlaceHolder/images/reactgrid/grid-series-1.png
 tags:
   - react
   - grid

@@ -1,6 +1,7 @@
 ---
 title: "The Dortmund experience"
 date: "2014-10-16"
+thumbnail: serverUrlPlaceHolder/images/dortmund/dortmund-1.jpeg
 tags:
   - bundesliga
   - germany

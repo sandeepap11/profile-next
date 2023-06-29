@@ -1,6 +1,7 @@
 ---
 title: "Euro 2016: A beautiful game made ugly in South of France"
 date: "2016-06-13"
+thumbnail: serverUrlPlaceHolder/images/marseille/marseille-3.jpeg
 tags:
   - euro2016
   - france

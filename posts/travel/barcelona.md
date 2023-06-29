@@ -1,6 +1,7 @@
 ---
 title: "Weekend in the city of treble winners"
 date: "2015-06-17"
+thumbnail: serverUrlPlaceHolder/images/barcelona/barcelona-1.jpg
 tags:
   - laliga
   - spain

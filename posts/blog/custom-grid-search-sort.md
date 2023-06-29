@@ -1,6 +1,7 @@
 ---
 title: "A Custom React Grid: Search and Sort (Part 3)"
 date: "2020-07-21"
+thumbnail: serverUrlPlaceHolder/images/reactgrid/grid-series-3.png
 tags:
   - react
   - grid

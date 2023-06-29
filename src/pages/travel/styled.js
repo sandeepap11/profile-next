@@ -53,5 +53,13 @@ export const BlogPost = styled.div`
       line-height: 1.6;
       color: #fff;
     }
+
+    pre {
+      background: #000;
+      padding: 2rem;
+      code {
+        color: #fff;
+      }
+    }
   }
 `;

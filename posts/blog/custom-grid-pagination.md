@@ -1,6 +1,7 @@
 ---
 title: "A Custom React Grid: Pagination (Part 2)"
 date: "2020-07-10"
+thumbnail: serverUrlPlaceHolder/images/reactgrid/grid-series-2.png
 tags:
   - react
   - grid
