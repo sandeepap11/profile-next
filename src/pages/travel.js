@@ -28,6 +28,7 @@ const travel = ({ allPostsData }) => {
                 <Link href={`/travel/${id}`} className="hover:text-white">
                   <div className="flex flex-col justify-between h-full">
                     <img
+                      className="h-100 object-cover"
                       src={(thumbnail || defaultThumbnail).replace(
                         "serverUrlPlaceHolder",
                         process.env.SERVER_URL
