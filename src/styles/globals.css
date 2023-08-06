@@ -30,20 +30,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-/** Header styles */
-/* change navbar background */
-nav.navbar {
-  background: transparent;
-}
-
 /* change navbar-brand color */
 .navbar a.navbar-brand {
-  color: white;
+  color: #8a8ac1;
+  font-weight: bold;
 }
 
 /* change navbar-brand color on hover */
 .navbar a.navbar-brand:hover {
-  color: green;
+  color: chartreuse;
 }
 
 /*  change navbar li colors, also active one but not disabled one */

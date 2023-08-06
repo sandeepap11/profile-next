@@ -10,19 +10,19 @@ function BasicExample() {
   const router = useRouter();
 
   return (
-    <Navbar bg="#1d1160" expand="lg">
+    <Navbar bg="#1d1160" expand="lg" className="fixed bg-[#1d1160] w-100 h-20">
       <Container>
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand text-4xl" href="/">
           SANDEEP
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="text-white" id="basic-navbar-nav">
-          <Nav className="me-auto items-center justify-around w-80">
+          <Nav className="me-auto items-center justify-around pl-8">
             {HEADERS.sort((headerA, headerB) => headerA.id - headerB.id).map(
               (header) => (
                 <Link
                   key={header.id}
-                  className={`hover:text-yellow-600 hover:decoration-1 hover:underline ${
+                  className={`text-2xl pr-6 hover:text-yellow-600 hover:decoration-1 hover:underline ${
                     (header.link === "/" && router.pathname === header.link) ||
                     (header.link !== "/" &&
                       router.pathname.includes(header.link))

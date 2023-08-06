@@ -2,7 +2,6 @@ import { Container } from "react-bootstrap";
 import Link from "next/link";
 import { getAllPostIds, getPostData } from "../../../lib/blogPosts";
 import MainLayout from "../layouts/MainLayout";
-import { BlogPost } from "../travel/styled";
 import { formatDate } from "../../utils/Methods";
 
 export async function getStaticProps({ params }) {
@@ -32,7 +31,7 @@ export default function Post({ postData }) {
   return (
     <MainLayout>
       <Container>
-        <BlogPost>
+        <div className="blog-post">
           <h1 className="title">{postData.title}</h1>
           <div className="tags">
             TAGS:{" "}
@@ -52,7 +51,7 @@ export default function Post({ postData }) {
             className="post-body"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
-        </BlogPost>
+        </div>
       </Container>
     </MainLayout>
   );
