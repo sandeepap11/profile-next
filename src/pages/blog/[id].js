@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import Link from "next/link";
 import { getAllPostIds, getPostData } from "../../../lib/blogPosts";
 import MainLayout from "../layouts/MainLayout";
 import { BlogPost } from "../travel/styled";
@@ -37,7 +38,12 @@ export default function Post({ postData }) {
             TAGS:{" "}
             {postData.tags.map((tag) => (
               <div className="tag" key={tag}>
-                #{tag}
+                <Link
+                  href={`/blog?tag=${tag}`}
+                  className="hover:text-white hover:underline"
+                >
+                  #{tag}
+                </Link>
               </div>
             ))}
           </div>

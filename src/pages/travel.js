@@ -2,6 +2,7 @@ import MainLayout from "./layouts/MainLayout";
 import { getSortedPostsData } from "../../lib/travelPosts";
 import Link from "next/link";
 import { Col, Container, Row } from "react-bootstrap";
+import { useSearchParams } from "next/navigation";
 import { formatDate } from "../utils/Methods";
 
 export async function getStaticProps() {
@@ -16,13 +17,21 @@ export async function getStaticProps() {
 const defaultThumbnail = "serverUrlPlaceHolder/images/blog/default.jpg";
 
 const travel = ({ allPostsData }) => {
+  const searchParams = useSearchParams();
+
+  const tag = searchParams.get("tag");
+
+  const filteredPosts = tag
+    ? allPostsData.filter((post) => post.tags.includes(tag))
+    : allPostsData;
+
   return (
     <MainLayout>
       <Container>
         <h1 className="pt-4 pb-4 text-9xl">Travel</h1>
         <p>Check out the travel blogs</p>
         <Row>
-          {allPostsData.map(({ id, title, date, thumbnail }) => (
+          {filteredPosts.map(({ id, title, date, thumbnail }) => (
             <Col md={6} key={id}>
               <div className="pr-4 pb-4 h-full">
                 <Link href={`/travel/${id}`} className="hover:text-white">
