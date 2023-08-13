@@ -25,14 +25,26 @@ export const HOME_CONFIG = [
         category: "TRAVEL",
       },
       {
-        id: "barcelona",
+        id: "italy",
         order: 2,
         size: "S",
         category: "TRAVEL",
       },
       {
-        id: "custom-grid-search-sort",
+        id: "barcelona",
         order: 3,
+        size: "S",
+        category: "TRAVEL",
+      },
+      {
+        id: "milan",
+        order: 4,
+        size: "S",
+        category: "TRAVEL",
+      },
+      {
+        id: "custom-grid-search-sort",
+        order: 5,
         size: "S",
         category: "BLOG",
       },

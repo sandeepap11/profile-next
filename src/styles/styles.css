@@ -93,6 +93,19 @@
   }
 }
 
+.blog-post .post-body h2 {
+  font-weight: bold;
+  font-size: 2.1rem;
+  line-height: 1.43;
+  color: #cceebc;
+}
+
+@media (max-width: 960px) {
+  .blog-post .post-body h2 {
+    font-size: 1.4rem;
+  }
+}
+
 .blog-post .post-body p {
   font-size: 1.4rem;
   line-height: 1.6;
