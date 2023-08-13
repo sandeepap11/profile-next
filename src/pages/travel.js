@@ -58,7 +58,7 @@ const travel = ({ allPostsData }) => {
                     </Link>
                   </div>
                   <div className="bg-[#2d0080] p-4">
-                    <div className="pb-2 md:flex-col lg:flex justify-between items-center">
+                    <div className="pb-2 flex md:flex-col lg:flex-row justify-between items-center">
                       <p className="text-sm lg:text-xl w-fit text-white bg-black p-1">
                         {formatDate(date)}
                       </p>
@@ -74,7 +74,7 @@ const travel = ({ allPostsData }) => {
                         ))}
                       </div>
                     </div>
-                    <h3 className="text-3xl md:h-24 lg:h-16">
+                    <h3 className="text-3xl md:h-32 lg:h-16">
                       <Link
                         href={`/travel/${id}`}
                         className="text-red-300 font-bold hover:text-yellow-500 h-100"
