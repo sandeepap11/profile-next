@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import Link from "next/link";
+import Head from "next/head";
 import { getAllPostIds, getPostData } from "../../../lib/blogPosts";
 import MainLayout from "../layouts/MainLayout";
 import { formatDate } from "../../utils/Methods";
@@ -32,6 +33,9 @@ export default function Post({ postData }) {
     <MainLayout>
       <Container>
         <div className="blog-post">
+          <Head>
+            <title>Blog | {postData.title}</title>
+          </Head>
           <h1 className="title">{postData.title}</h1>
           <div className="tags">
             TAGS:{" "}

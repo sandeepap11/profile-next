@@ -1,6 +1,7 @@
 import MainLayout from "./layouts/MainLayout";
 import { getSortedPostsData } from "../../lib/blogPosts";
 import Link from "next/link";
+import Head from "next/head";
 import { Col, Container, Row } from "react-bootstrap";
 import { useSearchParams } from "next/navigation";
 import { formatDate } from "../utils/Methods";
@@ -28,6 +29,9 @@ const blog = ({ allPostsData }) => {
   return (
     <MainLayout>
       <Container>
+        <Head>
+          <title>Blog | Sandeep</title>
+        </Head>
         <h1 className="pt-4 pb-4 text-9xl">Blog</h1>
         <p className="pt-2 pb-4 text-3xl text-orange-300">
           Check out the technical blogs

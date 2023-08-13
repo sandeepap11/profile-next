@@ -9,7 +9,7 @@ export const HOME_CONFIG = [
     order: 1,
     type: ITEM_TYPES.OPENER,
     video: "/videos/home.mov",
-    text: { h: "Hi, my name is Sandeep!", p: "Welcome to my personal blog!" },
+    text: { h: "Hi, my name is Sandeep.", p: "Welcome to my personal blog!" },
   },
   {
     id: 2,
