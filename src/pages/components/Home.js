@@ -28,12 +28,14 @@ const Home = ({ allPostsData }) => {
       ).map((config) => (
         <div key={config.id}>
           {config.type === ITEM_TYPES.OPENER ? (
-            <div className="relative">
+            <div className="relative hidden md:block md:mt-8">
               <div className="absolute w-100 h-100 z-1 flex flex-col justify-center align-items-start bg-[rgba(29,17,96,0.5)]">
-                <h1 className="text-9xl text-[rgba(255,255,0,0.5)] pl-8 pb-8 font-bold	max-w-[60%]">
+                <h1 className="md:text-8xl lg:text-9xl text-[rgba(255,255,0,0.5)] pl-8 pb-8 font-bold	max-w-[60%]">
                   {config.text.h}
                 </h1>
-                <p className="text-8xl pl-8 pt-8 font-thin">{config.text.p}</p>
+                <p className="md:text-6xl lg:text-8xl pl-8 pt-8 font-thin">
+                  {config.text.p}
+                </p>
               </div>
               <video width="100%" autoPlay muted loop>
                 <source
@@ -43,12 +45,12 @@ const Home = ({ allPostsData }) => {
               </video>
             </div>
           ) : config.type === ITEM_TYPES.FEATURED ? (
-            <Container className="pt-16 pb-8">
+            <Container className="pt-0 md:pt-16 pb-8">
               <h2 className="text-6xl pt-4 pb-8 font-thin">{config.header}</h2>
               <Row>
                 {featuredPosts.map(
                   ({ id, title, date, thumbnail, tags, size, category }) => (
-                    <Col md={6} xl={size === "L" ? 12 : 6} key={id}>
+                    <Col sm={12} md={12} xl={size === "L" ? 12 : 6} key={id}>
                       <div className="pr-4 pb-16 h-full">
                         <div className="flex flex-col justify-between h-full">
                           <div className="h-100 relative">
@@ -68,11 +70,11 @@ const Home = ({ allPostsData }) => {
                             </Link>
                           </div>
                           <div className="bg-[#2d0080] p-4">
-                            <div className="pb-2 flex justify-between items-center">
-                              <p className="text-xl text-white bg-black p-1">
+                            <div className="pb-2 md:flex-col lg:flex justify-between items-center">
+                              <p className="text-xl w-fit text-white bg-black p-1">
                                 {formatDate(date)}
                               </p>
-                              <div className="tags ">
+                              <div className="tags break-words">
                                 {tags.map((tag) => (
                                   <Link
                                     key={tag}
@@ -84,7 +86,7 @@ const Home = ({ allPostsData }) => {
                                 ))}
                               </div>
                             </div>
-                            <h3 className="text-3xl h-16">
+                            <h3 className="text-3xl md:h-24 lg:h-16">
                               <Link
                                 href={`/${category.toLowerCase()}/${id}`}
                                 className="text-red-300 font-bold hover:text-yellow-500 h-100"

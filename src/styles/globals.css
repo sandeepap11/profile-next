@@ -21,6 +21,7 @@
 }
 
 body {
+  width: 100vw;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -59,8 +60,20 @@ body {
 }
 
 /* change navbar background on collapse */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   nav.navbar {
-    background: lightgray;
+    background: #1d1160;
+    z-index: 5;
+  }
+  .navbar-collapse.collapse.show,
+  .navbar-collapse.collapsing {
+    background: #1d1160;
+    padding: 1rem 0;
+  }
+
+  .navbar-collapse.collapse.show .navbar-nav,
+  .navbar-collapse.collapsing .navbar-nav {
+    text-decoration: none;
+    align-items: flex-start;
   }
 }
