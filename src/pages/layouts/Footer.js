@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Container className="sticky z-1 bottom-0 top-full text-center p-4">
       <Row>
-        <p className="text-3xl font-thin">
+        <p className="text-xl lg:text-3xl font-thin">
           © Sandeep {new Date().getFullYear()}. All rights reserved.
         </p>
       </Row>

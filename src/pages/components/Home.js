@@ -71,7 +71,7 @@ const Home = ({ allPostsData }) => {
                           </div>
                           <div className="bg-[#2d0080] p-4">
                             <div className="pb-2 md:flex-col lg:flex justify-between items-center">
-                              <p className="text-xl w-fit text-white bg-black p-1">
+                              <p className="text-sm lg:text-xl w-fit text-white bg-black p-1">
                                 {formatDate(date)}
                               </p>
                               <div className="tags break-words">
@@ -79,7 +79,7 @@ const Home = ({ allPostsData }) => {
                                   <Link
                                     key={tag}
                                     href={`/${category.toLowerCase()}?tag=${tag}`}
-                                    className="text-white hover:underline pr-2 text-xl"
+                                    className="text-white hover:underline pr-2 text-xs lg:text-xl"
                                   >
                                     #{tag}
                                   </Link>
