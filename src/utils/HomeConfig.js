@@ -19,32 +19,38 @@ export const HOME_CONFIG = [
     header: "Featured Blogs",
     items: [
       {
-        id: "dortmund",
+        id: "switzerland",
         order: 1,
         size: "L",
         category: "TRAVEL",
       },
       {
-        id: "italy",
+        id: "dortmund",
         order: 2,
         size: "S",
         category: "TRAVEL",
       },
       {
-        id: "barcelona",
+        id: "italy",
         order: 3,
         size: "S",
         category: "TRAVEL",
       },
       {
-        id: "milan",
+        id: "barcelona",
         order: 4,
         size: "S",
         category: "TRAVEL",
       },
       {
-        id: "custom-grid-search-sort",
+        id: "milan",
         order: 5,
+        size: "S",
+        category: "TRAVEL",
+      },
+      {
+        id: "custom-grid-search-sort",
+        order: 6,
         size: "S",
         category: "BLOG",
       },

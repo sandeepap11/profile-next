@@ -60,7 +60,7 @@ const Home = ({ allPostsData }) => {
                             >
                               <div className="absolute h-100 w-100 z-1 bg-[rgba(0,0,0,0.2)] hover:bg-transparent" />
                               <img
-                                className="h-100 object-cover"
+                                className="h-100 w-100 object-cover"
                                 src={(thumbnail || defaultThumbnail).replace(
                                   "serverUrlPlaceHolder",
                                   process.env.SERVER_URL
@@ -70,7 +70,7 @@ const Home = ({ allPostsData }) => {
                             </Link>
                           </div>
                           <div className="bg-[#2d0080] p-4">
-                            <div className="pb-2 flex md:flex-col lg:flex-row justify-between items-center">
+                            <div className="pb-2 flex flex-col lg:flex-row justify-between items-start lg:items-center">
                               <p className="text-sm lg:text-xl w-fit text-white bg-black p-1">
                                 {formatDate(date)}
                               </p>
