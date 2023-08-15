@@ -10,7 +10,11 @@ function BasicExample() {
   const router = useRouter();
 
   return (
-    <Navbar bg="#1d1160" expand="lg" className="fixed bg-[#1d1160] w-100 h-20">
+    <Navbar
+      bg="#1d1160"
+      expand="lg"
+      className="fixed z-10 bg-[#1d1160] w-100 h-20"
+    >
       <Container>
         <Link className="navbar-brand text-4xl" href="/">
           SANDEEP
