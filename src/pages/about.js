@@ -12,7 +12,7 @@ const About = () => {
           <title>About | Sandeep</title>
         </Head>
         <Row className="items-center justify-center">
-          <Col lg={5} className="flex flex-col m-0 p-4">
+          <Col lg={5} className="flex flex-col items-center m-0 p-4">
             <img
               className="w-80 h-80 mb-8 lg:w-96 lg:h-96 rounded-full object-cover"
               src={process.env.SERVER_URL + "/images/about/profile-image.jpg"}
