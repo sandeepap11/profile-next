@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <Container className="sticky z-1 bottom-0 top-full text-center p-4">
+    <Container className="text-center p-4">
       <Row>
         <p className="text-xl font-thin">
           © Sandeep {new Date().getFullYear()}. All rights reserved.

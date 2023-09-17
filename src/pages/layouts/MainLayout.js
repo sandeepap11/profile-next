@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="bg-[#1d1160] min-h-screen relative">
+    <div className="bg-[#1d1160] min-h-screen relative flex flex-col">
       <Head>
         <meta
           name="viewport"
@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
         ></meta>
       </Head>
       <Header />
-      <div className="pt-16">{children}</div>
+      <div className="pt-16 flex-1 min-h-screen">{children}</div>
       <Footer />
     </div>
   );
