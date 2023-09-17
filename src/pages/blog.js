@@ -18,6 +18,7 @@ export async function getStaticProps() {
 const defaultThumbnail = "serverUrlPlaceHolder/images/blog/default.jpg";
 
 const blog = ({ allPostsData }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const searchParams = useSearchParams();
 
   const tag = searchParams.get("tag");
@@ -34,7 +35,7 @@ const blog = ({ allPostsData }) => {
         </Head>
         <h1 className="pt-4 pb-4 text-6xl md:text-9xl">Blog</h1>
         <p className="pt-2 pb-4 text-2xl md:text-3xl text-orange-300">
-          Check out the technical blogs
+          Check out the technical blogs.
         </p>
         <Row>
           {filteredPosts.map(({ id, title, date, thumbnail, tags }) => (
