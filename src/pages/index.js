@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getSortedPostsData as getTravelPostsData } from "../../lib/travelPosts";
 import { getSortedPostsData as getBlogPostsData } from "../../lib/blogPosts";
-import Home from "./components/Home";
+import Home from "../components/Home";
 
 export async function getStaticProps() {
   const allPostsData = getTravelPostsData().concat(getBlogPostsData());

@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
-import MainLayout from "../layouts/MainLayout";
-import { ITEM_TYPES, HOME_CONFIG } from "../../utils/HomeConfig";
-import { formatDate } from "../../utils/Methods";
+import MainLayout from "../pages/layouts/MainLayout";
+import { ITEM_TYPES, HOME_CONFIG } from "../utils/HomeConfig";
+import { formatDate } from "../utils/Methods";
 
 const defaultThumbnail = "serverUrlPlaceHolder/images/blog/default.jpg";
 
