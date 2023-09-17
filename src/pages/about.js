@@ -29,7 +29,7 @@ const About = () => {
             </div>
           </Col>
           <Col lg={7}>
-            <h1 className="font-thin text-3xl lg:text-9xl text-[#BAB700]">
+            <h1 className="font-thin text-3xl lg:text-9xl text-[#7fff00]">
               Hello, I am Sandeep!
             </h1>
             <p className="font-bold text-xl lg:text-3xl pt-4">
@@ -42,7 +42,7 @@ const About = () => {
               these on here.
             </p>
             <p className="text-xs lg:text-xl text-[#FF579F] pt-4">
-              This site is built using Next JS and deployed using Vercel
+              This site is built using Next JS and deployed using Netlify.
             </p>
           </Col>
         </Row>
