@@ -3,13 +3,15 @@ import { Container, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <Container className="text-center p-4">
-      <Row>
-        <p className="text-xl font-thin">
-          © Sandeep {new Date().getFullYear()}. All rights reserved.
-        </p>
-      </Row>
-    </Container>
+    <div className="text-center mt-4 p-3 bg-black w-screen">
+      <Container>
+        <Row>
+          <p className="text-xl font-thin">
+            © Sandeep {new Date().getFullYear()}. All rights reserved.
+          </p>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
