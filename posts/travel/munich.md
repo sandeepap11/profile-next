@@ -18,6 +18,7 @@ I visited Munich, the capital of Bavaria and the home of Oktoberfest. While ther
 
 ![stadium outside view](serverUrlPlaceHolder/images/munich/munich-1.jpeg)
 ![stadium outside view](serverUrlPlaceHolder/images/munich/munich-2.jpeg)
+![stadium outside view](serverUrlPlaceHolder/images/munich/munich-4.jpg)
 ![stadium outside view](serverUrlPlaceHolder/images/munich/munich-21.jpeg)
 ![stadium outside view](serverUrlPlaceHolder/images/munich/munich-22.jpeg)
 ![stadium outside view](serverUrlPlaceHolder/images/munich/munich-23.jpeg)
@@ -26,7 +27,6 @@ I visited Munich, the capital of Bavaria and the home of Oktoberfest. While ther
 I took the subway to the Arena station (U-Bahnstation as the Germans refer to subway stations) and took a walk to the stadium. The unmistakeable structure appears from pretty far away and it's quite the sight. The tour guide did mention that the stadium is built in a way that even the spectators seated far away can get a good sight of the games.
 
 ![inside view](serverUrlPlaceHolder/images/munich/munich-3.jpeg)
-![inside view](serverUrlPlaceHolder/images/munich/munich-4.jpg)
 ![inside view](serverUrlPlaceHolder/images/munich/munich-12.jpeg)
 ![inside view](serverUrlPlaceHolder/images/munich/munich-13.jpeg)
 ![inside view](serverUrlPlaceHolder/images/munich/munich-19.jpeg)
