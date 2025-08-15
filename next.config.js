@@ -8,8 +8,8 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/blog/:path*",
-        destination: "https://blog-temp.netlify.app/:path*",
+        source: "/chessknight/:path*",
+        destination: "https://admiring-spence-c56151.netlify.app/:path*",
       },
     ];
   },
