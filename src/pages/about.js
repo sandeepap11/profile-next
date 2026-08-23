@@ -41,10 +41,10 @@ const About = () => {
               execution pipelines.{" "}
             </p>
             <p className="font-thin text-base lg:text-2xl pt-4">
-              Based in Bengaluru, India. When I'm not debugging multi-turn agent
-              loops or building developer tooling, I'm usually tracking football
-              fixtures across the globe. I build software, travel for matchdays,
-              and document the trade-offs along the way.
+              Based in Bengaluru, India. When I&apos;m not debugging multi-turn
+              agent loops or building developer tooling, I&apos;m usually
+              tracking football fixtures across the globe. I build software,
+              travel for matchdays, and document the trade-offs along the way.
             </p>
             <p className="text-xs lg:text-xl text-[#FF579F] pt-4">
               This site is built using Next JS and deployed using Netlify.
