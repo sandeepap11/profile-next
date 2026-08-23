@@ -9,7 +9,7 @@ export const HOME_CONFIG = [
     order: 1,
     type: ITEM_TYPES.OPENER,
     text: {
-      h: "Hi, I&apos;m Sandeep.",
+      h: "Hi, I am Sandeep.",
       p: "Software developer building AI tools & agentic workflows, sharing travel stories, and exploring technical systems.",
     },
   },
