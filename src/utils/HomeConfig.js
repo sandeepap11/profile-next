@@ -8,8 +8,10 @@ export const HOME_CONFIG = [
     id: 1,
     order: 1,
     type: ITEM_TYPES.OPENER,
-    video: "/videos/home.mov",
-    text: { h: "Hi, my name is Sandeep.", p: "Welcome to my personal blog!" },
+    text: {
+      h: "Hi, I'm Sandeep.",
+      p: "Software developer building AI tools & agentic workflows, sharing travel stories, and exploring technical systems.",
+    },
   },
   {
     id: 2,
@@ -48,12 +50,7 @@ export const HOME_CONFIG = [
         size: "S",
         category: "TRAVEL",
       },
-      {
-        id: "custom-grid-search-sort",
-        order: 6,
-        size: "S",
-        category: "BLOG",
-      },
+      // legacy technical posts removed from featured list (moved to /archive)
     ],
   },
 ];

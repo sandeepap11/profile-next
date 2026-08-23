@@ -9,7 +9,7 @@ const defaultThumbnail = "serverUrlPlaceHolder/images/blog/default.jpg";
 const Home = ({ allPostsData }) => {
   let featuredPosts = [];
   const featuredPostConfig = HOME_CONFIG.find(
-    (config) => config.type === ITEM_TYPES.FEATURED
+    (config) => config.type === ITEM_TYPES.FEATURED,
   ).items.sort((itemA, itemB) => itemA.order - itemB.order);
 
   for (let postConfigItem of featuredPostConfig) {
@@ -24,26 +24,22 @@ const Home = ({ allPostsData }) => {
   return (
     <MainLayout>
       {HOME_CONFIG.sort(
-        (configA, configB) => configA.order - configB.order
+        (configA, configB) => configA.order - configB.order,
       ).map((config) => (
         <div key={config.id}>
           {config.type === ITEM_TYPES.OPENER ? (
-            <div className="relative hidden md:block md:mt-8">
-              <div className="absolute w-100 h-100 z-1 flex flex-col justify-center align-items-start bg-[rgba(29,17,96,0.5)]">
-                <h1 className="md:text-8xl lg:text-9xl text-[rgba(255,255,0,0.5)] pl-8 pb-8 font-bold	max-w-[60%]">
-                  {config.text.h}
-                </h1>
-                <p className="md:text-6xl lg:text-8xl pl-8 pt-8 font-thin">
-                  {config.text.p}
-                </p>
+            <section className="py-24 md:py-40 bg-transparent">
+              <div className="container mx-auto px-6">
+                <div className="max-w-3xl">
+                  <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+                    {config.text.h}
+                  </h1>
+                  <p className="mt-6 text-xl md:text-2xl text-gray-400">
+                    {config.text.p}
+                  </p>
+                </div>
               </div>
-              <video width="100%" autoPlay muted loop>
-                <source
-                  src={`${process.env.SERVER_URL}${config.video}`}
-                  type="video/mp4"
-                />
-              </video>
-            </div>
+            </section>
           ) : config.type === ITEM_TYPES.FEATURED ? (
             <Container className="pt-0 md:pt-16 pb-8">
               <h2 className="text-6xl pt-4 pb-8 font-thin">{config.header}</h2>
@@ -63,7 +59,7 @@ const Home = ({ allPostsData }) => {
                                 className="h-100 w-100 object-cover"
                                 src={(thumbnail || defaultThumbnail).replace(
                                   "serverUrlPlaceHolder",
-                                  process.env.SERVER_URL
+                                  process.env.SERVER_URL,
                                 )}
                                 alt={title + " thumbnail"}
                               />
@@ -98,7 +94,7 @@ const Home = ({ allPostsData }) => {
                         </div>
                       </div>
                     </Col>
-                  )
+                  ),
                 )}
               </Row>
             </Container>
