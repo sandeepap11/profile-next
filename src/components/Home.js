@@ -51,7 +51,11 @@ const Home = ({ allPostsData }) => {
                         <div className="flex flex-col justify-between h-full">
                           <div className="h-100 relative">
                             <Link
-                              href={`/${category.toLowerCase()}/${id}`}
+                              href={`/${
+                                category.toLowerCase() === "blog"
+                                  ? "tech"
+                                  : category.toLowerCase()
+                              }/${id}`}
                               className="hover:text-white h-100"
                             >
                               <div className="absolute h-100 w-100 z-1 bg-[rgba(0,0,0,0.2)] hover:bg-transparent" />
@@ -71,10 +75,14 @@ const Home = ({ allPostsData }) => {
                                 {formatDate(date)}
                               </p>
                               <div className="tags break-words">
-                                {tags.map((tag) => (
+                                {tags?.map((tag) => (
                                   <Link
                                     key={tag}
-                                    href={`/${category.toLowerCase()}?tag=${tag}`}
+                                    href={`/${
+                                      category.toLowerCase() === "blog"
+                                        ? "tech"
+                                        : category.toLowerCase()
+                                    }?tag=${tag}`}
                                     className="text-white hover:underline pr-2 text-xs lg:text-xl"
                                   >
                                     #{tag}

@@ -17,23 +17,23 @@ export async function getStaticProps() {
 
 const defaultThumbnail = "serverUrlPlaceHolder/images/blog/default.jpg";
 
-const blog = ({ allPostsData }) => {
+const Tech = ({ allPostsData }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const searchParams = useSearchParams();
 
   const tag = searchParams.get("tag");
 
   const filteredPosts = tag
-    ? allPostsData.filter((post) => post.tags.includes(tag))
+    ? allPostsData.filter((post) => post.tags && post.tags.includes(tag))
     : allPostsData;
 
   return (
     <MainLayout>
       <Container>
         <Head>
-          <title>Blog | Sandeep</title>
+          <title>Tech | Sandeep</title>
         </Head>
-        <h1 className="pt-4 pb-4 text-6xl md:text-9xl">Blog</h1>
+        <h1 className="pt-4 pb-4 text-6xl md:text-9xl">Tech</h1>
         <p className="pt-2 pb-4 text-2xl md:text-3xl text-orange-300">
           Check out the technical blogs.
         </p>
@@ -44,7 +44,7 @@ const blog = ({ allPostsData }) => {
                 <div className="flex flex-col justify-between h-full">
                   <div className="h-100 relative">
                     <Link
-                      href={`/blog/${id}`}
+                      href={`/tech/${id}`}
                       className="hover:text-white h-100"
                     >
                       <div className="absolute h-100 w-100 z-1 bg-[rgba(0,0,0,0.2)] hover:bg-transparent" />
@@ -52,7 +52,7 @@ const blog = ({ allPostsData }) => {
                         className="h-100 object-cover"
                         src={(thumbnail || defaultThumbnail).replace(
                           "serverUrlPlaceHolder",
-                          process.env.SERVER_URL
+                          process.env.SERVER_URL,
                         )}
                         alt={title + " thumbnail"}
                       />
@@ -64,20 +64,21 @@ const blog = ({ allPostsData }) => {
                         {formatDate(date)}
                       </p>
                       <div className="tags break-words">
-                        {tags.map((tag) => (
-                          <Link
-                            key={tag}
-                            href={`/blog?tag=${tag}`}
-                            className="text-white hover:underline pr-2 text-xs lg:text-xl"
-                          >
-                            #{tag}
-                          </Link>
-                        ))}
+                        {tags &&
+                          tags.map((tag) => (
+                            <Link
+                              key={tag}
+                              href={`/tech?tag=${tag}`}
+                              className="text-white hover:underline pr-2 text-xs lg:text-xl"
+                            >
+                              #{tag}
+                            </Link>
+                          ))}
                       </div>
                     </div>
                     <h3 className="text-3xl md:h-24 lg:h-16">
                       <Link
-                        href={`/blog/${id}`}
+                        href={`/tech/${id}`}
                         className="text-red-300 font-bold hover:text-yellow-500 h-100"
                       >
                         {title}{" "}
@@ -94,4 +95,4 @@ const blog = ({ allPostsData }) => {
   );
 };
 
-export default blog;
+export default Tech;

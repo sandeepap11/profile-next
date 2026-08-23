@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export default function Post({ postData }) {
   const htmlContent = postData.contentHtml.replaceAll(
     "serverUrlPlaceHolder",
-    process.env.SERVER_URL
+    process.env.SERVER_URL,
   );
 
   return (
@@ -34,21 +34,22 @@ export default function Post({ postData }) {
       <Container>
         <div className="blog-post">
           <Head>
-            <title>Blog | {postData.title}</title>
+            <title>Tech | {postData.title}</title>
           </Head>
           <h1 className="title">{postData.title}</h1>
           <div className="tags">
             TAGS:{" "}
-            {postData.tags.map((tag) => (
-              <div className="tag" key={tag}>
-                <Link
-                  href={`/blog?tag=${tag}`}
-                  className="hover:text-white hover:underline"
-                >
-                  #{tag}
-                </Link>
-              </div>
-            ))}
+            {postData.tags &&
+              postData.tags.map((tag) => (
+                <div className="tag" key={tag}>
+                  <Link
+                    href={`/tech?tag=${tag}`}
+                    className="hover:text-white hover:underline"
+                  >
+                    #{tag}
+                  </Link>
+                </div>
+              ))}
           </div>
           <p className="date">{formatDate(postData.date)}</p>
           <div

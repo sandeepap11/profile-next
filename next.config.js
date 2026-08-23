@@ -14,6 +14,20 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/blog/:path*",
+        destination: "/tech/:path*",
+        permanent: true,
+      },
+      {
+        source: "/blog",
+        destination: "/tech",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
