@@ -33,13 +33,18 @@ const About = () => {
               Hello, I am Sandeep!
             </h1>
             <p className="font-bold text-xl lg:text-3xl pt-4">
-              I am a Front-End developer specializing in React JS. I build
-              intuitive, responsive and accessible web user interfaces.
+              Software Developer | Agentic AI & Modern Web
             </p>
             <p className="font-thin text-base lg:text-2xl pt-4">
-              I live in Bengaluru, India. I love Football (soccer), to travel,
-              and to travel to football games. I have tried to combine all of
-              these on here.
+              I build intuitive web interfaces with React and design autonomous
+              AI agents powered by local LLMs, tool-calling loops, and custom
+              execution pipelines.{" "}
+            </p>
+            <p className="font-thin text-base lg:text-2xl pt-4">
+              Based in Bengaluru, India. When I'm not debugging multi-turn agent
+              loops or building developer tooling, I'm usually tracking football
+              fixtures across the globe. I build software, travel for matchdays,
+              and document the trade-offs along the way.
             </p>
             <p className="text-xs lg:text-xl text-[#FF579F] pt-4">
               This site is built using Next JS and deployed using Netlify.

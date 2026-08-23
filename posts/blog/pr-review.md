@@ -1,6 +1,6 @@
 ---
 title: "Upgrading a REST API Review Tool to an Autonomous Agent"
-date: "2026-08-23"
+date: "2026-06-21"
 thumbnail: serverUrlPlaceHolder/images/blog/pr-agent.jpeg
 tags:
   - agentic
@@ -8,8 +8,9 @@ tags:
   - llm
   - development
 related:
-  - local-agent
   - fpl-bot
+  - instagram-bot
+  - local-agent
 ---
 
 A while back, I built a simple automated code review tool: a REST API webhook grabbed the `git diff` from a pull request, passed that raw text string to an LLM endpoint, and posted the model's review comments back to the PR.

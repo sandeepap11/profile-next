@@ -1,58 +1,51 @@
 import { HEADERS } from "@/utils/Constants";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-//import NavDropdown from "react-bootstrap/NavDropdown";
 
 function BasicExample() {
   const router = useRouter();
 
   return (
     <Navbar
-      bg="#1d1160"
       expand="lg"
-      className="fixed z-10 bg-[#1d1160] w-100 h-20"
+      className="sticky top-0 z-50 bg-[#0B0F17]/80 backdrop-blur-md border-b border-slate-800/60"
     >
-      <Container>
-        <Link className="navbar-brand text-4xl" href="/">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 w-full flex items-center justify-between">
+        <Link href="/" className="text-2xl font-extrabold tracking-tight">
           SANDEEP
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="text-white" id="basic-navbar-nav">
-          <Nav className="me-auto items-center justify-around pl-8">
-            {HEADERS.sort((headerA, headerB) => headerA.id - headerB.id).map(
-              (header) => (
-                <Link
-                  key={header.id}
-                  className={`text-2xl pr-6 hover:text-yellow-600 hover:decoration-1 hover:underline ${
+
+        <div className="flex items-center">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="flex items-center gap-4">
+              {HEADERS.sort((headerA, headerB) => headerA.id - headerB.id).map(
+                (header) => {
+                  const isActive =
                     (header.link === "/" && router.pathname === header.link) ||
                     (header.link !== "/" &&
-                      router.pathname.includes(header.link))
-                      ? "text-yellow-600 underline"
-                      : "text-[color:white]"
-                  }`}
-                  href={header.link}
-                >
-                  {header.name}
-                </Link>
-              )
-            )}
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
+                      router.pathname.includes(header.link));
+                  return (
+                    <Link
+                      key={header.id}
+                      href={header.link}
+                      className={`text-sm font-medium px-3 py-1.5 transition-colors duration-150 ${
+                        isActive
+                          ? "bg-slate-800 text-slate-100 rounded-lg"
+                          : "text-slate-300 hover:text-slate-100"
+                      }`}
+                    >
+                      {header.name}
+                    </Link>
+                  );
+                },
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </div>
+      </div>
     </Navbar>
   );
 }

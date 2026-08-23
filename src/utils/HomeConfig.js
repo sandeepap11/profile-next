@@ -21,35 +21,48 @@ export const HOME_CONFIG = [
     header: "Featured Blogs",
     items: [
       {
-        id: "switzerland",
+        id: "fpl-bot",
         order: 1,
         size: "L",
-        category: "TRAVEL",
+        category: "TECH",
       },
       {
-        id: "dortmund",
+        id: "instagram-bot",
         order: 2,
+        size: "S",
+        category: "TECH",
+      },
+      {
+        id: "pr-review",
+        order: 3,
+        size: "S",
+        category: "TECH",
+      },
+      {
+        id: "local-agent",
+        order: 4,
+        size: "S",
+        category: "TECH",
+      },
+      {
+        id: "switzerland",
+        order: 5,
         size: "S",
         category: "TRAVEL",
       },
       {
         id: "italy",
-        order: 3,
+        order: 6,
         size: "S",
         category: "TRAVEL",
       },
       {
-        id: "barcelona",
-        order: 4,
+        id: "dortmund",
+        order: 7,
         size: "S",
         category: "TRAVEL",
       },
-      {
-        id: "milan",
-        order: 5,
-        size: "S",
-        category: "TRAVEL",
-      },
+
       // legacy technical posts removed from featured list (moved to /archive)
     ],
   },

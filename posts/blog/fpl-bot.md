@@ -1,6 +1,6 @@
 ---
 title: "How I Created an FPL Bot with Ollama"
-date: "2026-08-22"
+date: "2026-08-23"
 thumbnail: serverUrlPlaceHolder/images/blog/fpl-bot.jpeg
 tags:
   - agentic
@@ -8,11 +8,14 @@ tags:
   - llm
   - football
 related:
-  - local-agent
+  - instagram-bot
   - pr-review
+  - local-agent
 ---
 
 # I Let an ILP Solver and a Local LLM Draft My Fantasy Premier League Team
+
+![diagram](serverUrlPlaceHolder/images/blog/fpl-bot-diagram.jpg)
 
 Every August, I do the same thing: stare at 700+ Premier League players, a £100m budget, and try to convince myself I'm not just guessing. This year I decided to make the guessing someone — well, something — else's problem.
 
@@ -21,6 +24,8 @@ The result is **Andre Ollama**: a hybrid system where Python does the arithmetic
 ## Why hybrid, not "just ask the LLM"
 
 Raw LLMs are bad at exactly the things FPL squad selection needs: strict arithmetic (budget constraints, position limits, max-3-per-club rules) and staying grounded in numbers instead of confidently making them up. Ask an LLM to "pick an optimal 15-man squad under £100m" and you'll get something plausible-sounding that's quietly over budget or missing a position.
+
+I found this out firsthand last season, running my "Botman Begins" team through ChatGPT. At one point it suggested I sign Diogo Jota. It followed that up with Cameron Archer, Amari'i Bell, and Kabore, all of whom were playing Championship football at the time. When I called it out, it put it better than I could: "The most ridiculous thing was probably that you had to become my FPL database." That team barely made any changes all season and finished mid-table in a 20-team friends' league.
 
 So I split the problem in two:
 

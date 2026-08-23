@@ -1,6 +1,6 @@
 ---
 title: "Ollama, Small Models, and Function Calling"
-date: "2026-08-16"
+date: "2026-05-24"
 thumbnail: serverUrlPlaceHolder/images/blog/ollama.jpeg
 tags:
   - agentic
@@ -8,6 +8,7 @@ tags:
   - llm
 related:
   - fpl-bot
+  - instagram-bot
   - pr-review
 ---
 
