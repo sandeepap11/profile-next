@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Light mode fallback (kept minimal) */
+  --bg-base: 11 15 23; /* #0B0F17 */
+  --bg-surface: 19 26 38; /* #131A26 */
+  --text-primary: 241 245 249; /* #F1F5F9 */
+  --text-muted: 148 163 184; /* #94A3B8 */
+  --border: 255 255 255; /* use with /10 opacity */
+  --accent-mint: 0 255 135; /* #00FF87 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --bg-base: 11 15 23;
+    --bg-surface: 19 26 38;
+    --text-primary: 241 245 249;
+    --text-muted: 148 163 184;
+    --border: 255 255 255;
+    --accent-mint: 0 255 135;
   }
 }
 
@@ -22,53 +29,69 @@
 
 body {
   width: 100vw;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--text-primary));
+  background-color: rgb(var(--bg-base));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography and code font choices */
+body {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+}
+
+code,
+pre,
+kbd {
+  font-family:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    "Roboto Mono", "Courier New", monospace;
 }
 
 /* change navbar-brand color */
+/* Navbar and responsive collapse styling using glassmorphism */
 .navbar a.navbar-brand {
-  color: #8a8ac1;
-  font-weight: bold;
+  color: rgb(var(--text-primary));
+  font-weight: 700;
 }
 
-/* change navbar-brand color on hover */
 .navbar a.navbar-brand:hover {
-  color: chartreuse;
+  color: rgb(var(--accent-mint));
 }
 
-/*  change navbar li colors, also active one but not disabled one */
 .navbar ul.navbar-nav li.nav-item a.nav-link {
-  color: white;
+  color: rgb(var(--text-primary));
 }
 
-/* change navbar-toggler inside lines color (stroke) */
 .navbar-light span.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  color: white;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: rgb(var(--text-primary));
   width: 1.2em;
 }
 
-/* change hamburger button border color */
 .navbar-light button.navbar-toggler {
-  border-color: white;
+  border-color: rgba(var(--border), 0.1);
 }
 
-/* change navbar background on collapse */
 @media (max-width: 960px) {
   nav.navbar {
-    background: #1d1160;
-    z-index: 5;
+    background: rgb(var(--bg-surface) / 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 50;
   }
   .navbar-collapse.collapse.show,
   .navbar-collapse.collapsing {
-    background: #1d1160;
+    background: rgb(var(--bg-surface) / 0.85);
     padding: 1rem 0;
+    border: 1px solid rgba(var(--border), 0.06);
   }
 
   .navbar-collapse.collapse.show .navbar-nav,

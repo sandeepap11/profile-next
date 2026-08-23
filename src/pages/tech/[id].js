@@ -1,13 +1,13 @@
 import { Container } from "react-bootstrap";
 import Link from "next/link";
 import Head from "next/head";
-import { getAllPostIds, getPostData } from "../../../lib/travelPosts";
+import { getAllPostIds, getPostData } from "../../../lib/blogPosts";
 import MainLayout from "../layouts/MainLayout";
 import { formatDate } from "../../utils/Methods";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
-
+  // load related posts' metadata if present
   let relatedPosts = [];
   if (postData.related && Array.isArray(postData.related)) {
     relatedPosts = await Promise.all(
@@ -55,21 +55,22 @@ export default function Post({ postData, relatedPosts }) {
       <Container>
         <div className="blog-post">
           <Head>
-            <title>Travel | {postData.title}</title>
+            <title>Tech | {postData.title}</title>
           </Head>
           <h1 className="title">{postData.title}</h1>
           <div className="tags">
             TAGS:{" "}
-            {postData.tags.map((tag) => (
-              <div className="tag" key={tag}>
-                <Link
-                  href={`/travel?tag=${tag}`}
-                  className="hover:text-white hover:underline"
-                >
-                  #{tag}
-                </Link>
-              </div>
-            ))}
+            {postData.tags &&
+              postData.tags.map((tag) => (
+                <div className="tag" key={tag}>
+                  <Link
+                    href={`/tech?tag=${tag}`}
+                    className="hover:text-white hover:underline"
+                  >
+                    #{tag}
+                  </Link>
+                </div>
+              ))}
           </div>
           <p className="date">{formatDate(postData.date)}</p>
           <div
@@ -85,7 +86,7 @@ export default function Post({ postData, relatedPosts }) {
                 {relatedPosts.map((rp) => (
                   <Link
                     key={rp.id}
-                    href={`/travel/${rp.id}`}
+                    href={`/tech/${rp.id}`}
                     className="block p-4 bg-[rgb(19,22,30)] rounded-lg hover:shadow-md"
                   >
                     {rp.thumbnail && (

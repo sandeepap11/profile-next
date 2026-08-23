@@ -8,8 +8,10 @@ export const HOME_CONFIG = [
     id: 1,
     order: 1,
     type: ITEM_TYPES.OPENER,
-    video: "/videos/home.mov",
-    text: { h: "Hi, my name is Sandeep.", p: "Welcome to my personal blog!" },
+    text: {
+      h: "Hi, I'm Sandeep.",
+      p: "Software developer building AI tools & agentic workflows, sharing travel stories, and exploring technical systems.",
+    },
   },
   {
     id: 2,
@@ -19,41 +21,49 @@ export const HOME_CONFIG = [
     header: "Featured Blogs",
     items: [
       {
-        id: "switzerland",
+        id: "fpl-bot",
         order: 1,
         size: "L",
-        category: "TRAVEL",
+        category: "TECH",
       },
       {
-        id: "dortmund",
+        id: "instagram-bot",
         order: 2,
         size: "S",
-        category: "TRAVEL",
+        category: "TECH",
       },
       {
-        id: "italy",
+        id: "pr-review",
         order: 3,
         size: "S",
-        category: "TRAVEL",
+        category: "TECH",
       },
       {
-        id: "barcelona",
+        id: "local-agent",
         order: 4,
         size: "S",
-        category: "TRAVEL",
+        category: "TECH",
       },
       {
-        id: "milan",
+        id: "switzerland",
         order: 5,
         size: "S",
         category: "TRAVEL",
       },
       {
-        id: "custom-grid-search-sort",
+        id: "italy",
         order: 6,
         size: "S",
-        category: "BLOG",
+        category: "TRAVEL",
       },
+      {
+        id: "dortmund",
+        order: 7,
+        size: "S",
+        category: "TRAVEL",
+      },
+
+      // legacy technical posts removed from featured list (moved to /archive)
     ],
   },
 ];

@@ -134,10 +134,10 @@ const GridRow = ({ match }) => {
   );
 };
 export default GridRow;
-```
 
 It might seem excessive that we are using separate classes to style each column but this way we have more control. If the Qatar World Cup hasn't taken place yet, you should see a result something like below.
 
 ![final screen](serverUrlPlaceHolder/images/reactgrid/grid-series-1.png)
 
 # That's it for this post. It won't seem like much. We will add a bit more functionalities next. I hope you'd follow along.
+```
