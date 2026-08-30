@@ -28,33 +28,27 @@ const Home = ({ allPostsData }) => {
       ).map((config) => (
         <div key={config.id}>
           {config.type === ITEM_TYPES.OPENER ? (
-            <section className="pt-0 pb-24">
+            <section className="pt-0 pb-16">
               <div className="max-w-3xl">
                 <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  Software Developer & AI Builder
+                  {config.text.role}
                 </span>
 
                 <h1 className="mt-6 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100">
-                  {config.text.h}
+                  {config.text.heading}
                 </h1>
 
                 <p className="text-lg text-slate-400 max-w-2xl leading-relaxed mt-3">
-                  {config.text.p}
+                  <b> {config.text.message}</b>
                 </p>
 
-                <div className="mt-6 flex items-center gap-4">
+                <div className="mt-6">
                   <Link
                     href="/tech"
                     className="bg-slate-100 text-slate-900 font-semibold px-4 py-2 rounded-lg hover:bg-white"
                   >
                     Explore Tech & AI
-                  </Link>
-                  <Link
-                    href="/travel"
-                    className="text-slate-300 hover:text-white px-4 py-2"
-                  >
-                    Travel Stories →
                   </Link>
                 </div>
               </div>
@@ -145,6 +139,24 @@ const Home = ({ allPostsData }) => {
                   ),
                 )}
               </Row>
+              <div className="mt-6 border-t border-slate-400/30 pt-8">
+                <p className="text-sm font-medium uppercase tracking-wide text-emerald-400">
+                  Outside of tech
+                </p>
+                <p className="mt-2 max-w-xl text-lg leading-relaxed text-slate-400">
+                  I write about football, travel and other things that keep me
+                  away from a keyboard.
+                </p>
+                <Link
+                  href="/travel"
+                  className="mt-4 inline-flex items-center rounded-lg bg-slate-800 px-4 py-2 font-semibold text-slate-100 transition-colors hover:bg-slate-700 hover:text-white"
+                >
+                  Travel & Football
+                  <span aria-hidden="true" className="ml-2">
+                    →
+                  </span>
+                </Link>
+              </div>
             </Container>
           ) : null}
         </div>
