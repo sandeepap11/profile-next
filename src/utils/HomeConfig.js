@@ -9,8 +9,10 @@ export const HOME_CONFIG = [
     order: 1,
     type: ITEM_TYPES.OPENER,
     text: {
-      h: "Hi, I am Sandeep.",
-      p: "Software developer building AI tools & agentic workflows, sharing travel stories, and exploring technical systems.",
+      role: "Software Developer & AI Builder",
+      heading: "Hi, I am Sandeep.",
+      message:
+        "Software engineer building AI agents, MCP integrations and intelligent developer tools. 15+ years building enterprise software, currently exploring what happens when LLMs get real tools and real work to do.",
     },
   },
   {
@@ -38,32 +40,6 @@ export const HOME_CONFIG = [
         size: "S",
         category: "TECH",
       },
-      {
-        id: "local-agent",
-        order: 4,
-        size: "S",
-        category: "TECH",
-      },
-      {
-        id: "switzerland",
-        order: 5,
-        size: "S",
-        category: "TRAVEL",
-      },
-      {
-        id: "italy",
-        order: 6,
-        size: "S",
-        category: "TRAVEL",
-      },
-      {
-        id: "dortmund",
-        order: 7,
-        size: "S",
-        category: "TRAVEL",
-      },
-
-      // legacy technical posts removed from featured list (moved to /archive)
     ],
   },
 ];
